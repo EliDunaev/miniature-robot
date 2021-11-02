@@ -9,21 +9,41 @@
 /* Begin PBXBuildFile section */
 		99181C212729561A003DA903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C202729561A003DA903 /* AppDelegate.swift */; };
 		99181C232729561A003DA903 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C222729561A003DA903 /* SceneDelegate.swift */; };
-		99181C252729561A003DA903 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C242729561A003DA903 /* ViewController.swift */; };
 		99181C282729561A003DA903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99181C262729561A003DA903 /* Main.storyboard */; };
 		99181C2A2729561B003DA903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99181C292729561B003DA903 /* Assets.xcassets */; };
 		99181C2D2729561B003DA903 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99181C2B2729561B003DA903 /* LaunchScreen.storyboard */; };
+		99181C3527296127003DA903 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C3427296127003DA903 /* MainScreen.swift */; };
+		99181C3727296433003DA903 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C3627296433003DA903 /* Game.swift */; };
+		99181C392729644F003DA903 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C382729644F003DA903 /* Session.swift */; };
+		99181C3B27296467003DA903 /* ScoreTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C3A27296467003DA903 /* ScoreTable.swift */; };
+		99181C3D2729647E003DA903 /* CareTaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C3C2729647E003DA903 /* CareTaker.swift */; };
+		99181C3F272965C6003DA903 /* ScoreTableScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C3E272965C6003DA903 /* ScoreTableScene.swift */; };
+		99181C41272965E8003DA903 /* ScoreHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C40272965E8003DA903 /* ScoreHeader.swift */; };
+		99181C4327296609003DA903 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C4227296609003DA903 /* ScoreCell.swift */; };
+		99181C4527296673003DA903 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C4427296673003DA903 /* AnswerButton.swift */; };
+		99181C472729669D003DA903 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C462729669D003DA903 /* Questions.swift */; };
+		991B5E8A27296A4B006399EA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B5E8927296A4B006399EA /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		99181C1D2729561A003DA903 /* MillionaireGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MillionaireGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99181C202729561A003DA903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99181C222729561A003DA903 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		99181C242729561A003DA903 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		99181C272729561A003DA903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99181C292729561B003DA903 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99181C2C2729561B003DA903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99181C2E2729561B003DA903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99181C3427296127003DA903 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		99181C3627296433003DA903 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		99181C382729644F003DA903 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		99181C3A27296467003DA903 /* ScoreTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTable.swift; sourceTree = "<group>"; };
+		99181C3C2729647E003DA903 /* CareTaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareTaker.swift; sourceTree = "<group>"; };
+		99181C3E272965C6003DA903 /* ScoreTableScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableScene.swift; sourceTree = "<group>"; };
+		99181C40272965E8003DA903 /* ScoreHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreHeader.swift; sourceTree = "<group>"; };
+		99181C4227296609003DA903 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
+		99181C4427296673003DA903 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
+		99181C462729669D003DA903 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		991B5E8927296A4B006399EA /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,49 @@
 		99181C1F2729561A003DA903 /* MillionaireGame */ = {
 			isa = PBXGroup;
 			children = (
+				99BE54FD27318B8D009C2CDD /* VC */,
+				99BE54FC27318B75009C2CDD /* Resources */,
+				99BE54FB27318B4E009C2CDD /* Game */,
 				99181C202729561A003DA903 /* AppDelegate.swift */,
 				99181C222729561A003DA903 /* SceneDelegate.swift */,
-				99181C242729561A003DA903 /* ViewController.swift */,
 				99181C262729561A003DA903 /* Main.storyboard */,
 				99181C292729561B003DA903 /* Assets.xcassets */,
 				99181C2B2729561B003DA903 /* LaunchScreen.storyboard */,
 				99181C2E2729561B003DA903 /* Info.plist */,
 			);
 			path = MillionaireGame;
+			sourceTree = "<group>";
+		};
+		99BE54FB27318B4E009C2CDD /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				99181C3C2729647E003DA903 /* CareTaker.swift */,
+				99181C3A27296467003DA903 /* ScoreTable.swift */,
+				99181C382729644F003DA903 /* Session.swift */,
+				99181C3627296433003DA903 /* Game.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		99BE54FC27318B75009C2CDD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				99181C462729669D003DA903 /* Questions.swift */,
+				99181C4427296673003DA903 /* AnswerButton.swift */,
+				99181C4227296609003DA903 /* ScoreCell.swift */,
+				99181C40272965E8003DA903 /* ScoreHeader.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		99BE54FD27318B8D009C2CDD /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				991B5E8927296A4B006399EA /* GameScene.swift */,
+				99181C3E272965C6003DA903 /* ScoreTableScene.swift */,
+				99181C3427296127003DA903 /* MainScreen.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +192,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99181C252729561A003DA903 /* ViewController.swift in Sources */,
+				99181C392729644F003DA903 /* Session.swift in Sources */,
+				99181C3527296127003DA903 /* MainScreen.swift in Sources */,
+				99181C3F272965C6003DA903 /* ScoreTableScene.swift in Sources */,
 				99181C212729561A003DA903 /* AppDelegate.swift in Sources */,
+				99181C3B27296467003DA903 /* ScoreTable.swift in Sources */,
+				99181C41272965E8003DA903 /* ScoreHeader.swift in Sources */,
+				99181C4527296673003DA903 /* AnswerButton.swift in Sources */,
 				99181C232729561A003DA903 /* SceneDelegate.swift in Sources */,
+				991B5E8A27296A4B006399EA /* GameScene.swift in Sources */,
+				99181C3727296433003DA903 /* Game.swift in Sources */,
+				99181C472729669D003DA903 /* Questions.swift in Sources */,
+				99181C4327296609003DA903 /* ScoreCell.swift in Sources */,
+				99181C3D2729647E003DA903 /* CareTaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
