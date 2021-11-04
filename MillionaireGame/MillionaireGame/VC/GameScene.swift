@@ -8,13 +8,21 @@
 import UIKit
 
 protocol GameSceneDelegate: AnyObject {
-    func resultSummation (_ controller: GameScene, questions: QuestionsPull)
+    func resultSummation (_ controller: GameScene, questions: QuestionTable)
 }
 
 final class GameScene: UIViewController {
     
     weak var gameDelegate: GameSceneDelegate?
-
+    private var setGameDifficultyStrategy: GameDiffcultyStrategy {
+        switch Game.shared.difficulty {
+        case .normal:
+            return NormalQuestions()
+        case .random:
+            return RandomQuestions()
+        }
+    }
+    
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var questionNumberLabel: UILabel!
@@ -22,13 +30,18 @@ final class GameScene: UIViewController {
     @IBOutlet weak var answerBLabel: AnswerButton!
     @IBOutlet weak var answerCLabel: AnswerButton!
     @IBOutlet weak var answerDLabel: AnswerButton!
+    @IBOutlet weak var rewardLabel: UILabel!
     
-    var question: QuestionsPull?
+    var question: QuestionTable?
     var questionNumber: Int = 0
+    var answerNumber: Int!
+    var gameQuestions: [QuestionTable]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dificultySetup()
         setupGameData()
+        
     }
     
     @IBAction func choseAnswer(_ sender: UIButton) {
@@ -38,11 +51,12 @@ final class GameScene: UIViewController {
             info.title = "Верно!"
             questionNumber += 1
             
-            if questionNumber < questions.count {
+            if questionNumber < questionsPull.count{
                 self.gameDelegate?.resultSummation(self, questions: question!)
                 info.addAction(UIAlertAction(title: "Продолжаем", style: .default, handler: setupGameData))
                 present(info, animated: true)
             } else {
+                self.gameDelegate?.resultSummation(self, questions: question!)
                 info.title = "Игра закончена"
                 info.addAction(UIAlertAction(title: "На главный экран", style: .default) {
                     [weak self] _ in
@@ -60,25 +74,31 @@ final class GameScene: UIViewController {
         }
     }
     
+    func dificultySetup() {
+        gameQuestions = setGameDifficultyStrategy.setDifficulty()
+    }
  
     func setupGameData(action: UIAlertAction! = nil) {
-        question = questions[questionNumber]
-        question?.answers.shuffle()
+        
+        question = gameQuestions![questionNumber]
         
         questionLabel.text = question?.question
         
         playerNameLabel.text = "У нас в студии Игрок 1"
         
-        questionNumberLabel.text = "Вопрос № \(questionNumber + 1) из 6 "
+        answerALabel.setTitle(question?.answers[0], for: .normal)
+        answerBLabel.setTitle(question?.answers[1], for: .normal)
+        answerCLabel.setTitle(question?.answers[2], for: .normal)
+        answerDLabel.setTitle(question?.answers[3], for: .normal)
         
-        answerALabel.setTitle(question?.answers[0].answer, for: .normal)
-        answerALabel.tag = (question?.answers[0].id)!
-        answerBLabel.setTitle(question?.answers[1].answer, for: .normal)
-        answerBLabel.tag = (question?.answers[1].id)!
-        answerCLabel.setTitle(question?.answers[2].answer, for: .normal)
-        answerCLabel.tag = (question?.answers[2].id)!
-        answerDLabel.setTitle(question?.answers[3].answer, for: .normal)
-        answerDLabel.tag = (question?.answers[3].id)!
+        Game.shared.session?.correctAnswers.addObserver(self, options: [.initial, .new],
+                                             closure: { [weak self] (correctAnswers, _) in
+            self?.questionNumberLabel.text = "Правильных ответов: \(correctAnswers) из \(self!.gameQuestions!.count)"
+                                             })
+        Game.shared.session?.totalReward.addObserver(self, options: [.initial, .new],
+                                             closure: { [weak self] (reward, _) in
+                                                self?.rewardLabel.text = "Сумма выигрыша: \(reward)"
+                                             })
     }
     
     func finishGame() {
