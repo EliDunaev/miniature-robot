@@ -30,7 +30,7 @@ class ScoreTableScene: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreCell")
         let score = scores.reversed()[indexPath.row]
         let date = dateFormatter.string(from: score.date)
-        cell?.textLabel?.text = "Дата: \(date) Верных ответов: \(score.score) из \(questions.count) Приз: \(score.reward) ₽"
+        cell?.textLabel?.text = "Дата: \(date) Верных ответов: \(score.score) из \(questionsPull.count) Приз: \(score.reward) ₽"
         return cell!
     }
     

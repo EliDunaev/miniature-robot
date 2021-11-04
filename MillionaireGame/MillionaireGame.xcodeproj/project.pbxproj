@@ -23,6 +23,11 @@
 		99181C4527296673003DA903 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C4427296673003DA903 /* AnswerButton.swift */; };
 		99181C472729669D003DA903 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99181C462729669D003DA903 /* Questions.swift */; };
 		991B5E8A27296A4B006399EA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B5E8927296A4B006399EA /* GameScene.swift */; };
+		99BF9504273417A100CEACA9 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BF9503273417A100CEACA9 /* SettingsScreen.swift */; };
+		99BF95062734199800CEACA9 /* SaveQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BF95052734199800CEACA9 /* SaveQuestions.swift */; };
+		99BF9508273419C000CEACA9 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BF9507273419C000CEACA9 /* Difficulty.swift */; };
+		99BF950A273419D800CEACA9 /* GameDiffcultyStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BF9509273419D800CEACA9 /* GameDiffcultyStrategy.swift */; };
+		99BF950C273419F400CEACA9 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BF950B273419F400CEACA9 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +49,11 @@
 		99181C4427296673003DA903 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		99181C462729669D003DA903 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		991B5E8927296A4B006399EA /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		99BF9503273417A100CEACA9 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		99BF95052734199800CEACA9 /* SaveQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveQuestions.swift; sourceTree = "<group>"; };
+		99BF9507273419C000CEACA9 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		99BF9509273419D800CEACA9 /* GameDiffcultyStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDiffcultyStrategy.swift; sourceTree = "<group>"; };
+		99BF950B273419F400CEACA9 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,10 @@
 				99181C3A27296467003DA903 /* ScoreTable.swift */,
 				99181C382729644F003DA903 /* Session.swift */,
 				99181C3627296433003DA903 /* Game.swift */,
+				99BF95052734199800CEACA9 /* SaveQuestions.swift */,
+				99BF9507273419C000CEACA9 /* Difficulty.swift */,
+				99BF9509273419D800CEACA9 /* GameDiffcultyStrategy.swift */,
+				99BF950B273419F400CEACA9 /* Observable.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -117,6 +131,7 @@
 				991B5E8927296A4B006399EA /* GameScene.swift */,
 				99181C3E272965C6003DA903 /* ScoreTableScene.swift */,
 				99181C3427296127003DA903 /* MainScreen.swift */,
+				99BF9503273417A100CEACA9 /* SettingsScreen.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -193,17 +208,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				99181C392729644F003DA903 /* Session.swift in Sources */,
+				99BF95062734199800CEACA9 /* SaveQuestions.swift in Sources */,
 				99181C3527296127003DA903 /* MainScreen.swift in Sources */,
 				99181C3F272965C6003DA903 /* ScoreTableScene.swift in Sources */,
+				99BF950C273419F400CEACA9 /* Observable.swift in Sources */,
 				99181C212729561A003DA903 /* AppDelegate.swift in Sources */,
 				99181C3B27296467003DA903 /* ScoreTable.swift in Sources */,
 				99181C41272965E8003DA903 /* ScoreHeader.swift in Sources */,
+				99BF950A273419D800CEACA9 /* GameDiffcultyStrategy.swift in Sources */,
 				99181C4527296673003DA903 /* AnswerButton.swift in Sources */,
 				99181C232729561A003DA903 /* SceneDelegate.swift in Sources */,
+				99BF9504273417A100CEACA9 /* SettingsScreen.swift in Sources */,
 				991B5E8A27296A4B006399EA /* GameScene.swift in Sources */,
 				99181C3727296433003DA903 /* Game.swift in Sources */,
 				99181C472729669D003DA903 /* Questions.swift in Sources */,
 				99181C4327296609003DA903 /* ScoreCell.swift in Sources */,
+				99BF9508273419C000CEACA9 /* Difficulty.swift in Sources */,
 				99181C3D2729647E003DA903 /* CareTaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

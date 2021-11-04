@@ -8,9 +8,17 @@
 import UIKit
 
 final class MainScreen: UIViewController {
+    private let questionCaretaker = SaveQuestions()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let savedQuestions = questionCaretaker.loadQuestionsData()
+        if savedQuestions.isEmpty {
+            return
+        } else {
+            questionsPull = savedQuestions
+        }
     }
     
     @IBAction func startGame(_ sender: UIButton) {
@@ -29,6 +37,14 @@ final class MainScreen: UIViewController {
         if let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ScoreScreen") as? ScoreTableScene {
             nextViewController.modalPresentationStyle = .popover
             self.present(nextViewController, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func settingsScreen() {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        if let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SettingsScreen") as? SettingsScreen {
+            nextViewController.modalPresentationStyle = .fullScreen
+            self.present(nextViewController, animated: false, completion: nil)
         }
     }
     
